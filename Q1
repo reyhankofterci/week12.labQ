@@ -21,7 +21,7 @@ int main() {
         printf("1- Ogrenci kaydi ekle\n");
         printf("2- Dosya olustur\n");
         printf("3- Ogrencileri listele\n");
-        printf("4- Ýsimlere gore ogrenci ara ve bilgilerini ekrana yazdir\n");
+        printf("4- Ä°simlere gore ogrenci ara ve bilgilerini ekrana yazdir\n");
         printf("5- Cikis\n");
         printf("Seciminizi yapin: ");
         scanf("%d", &choice);
@@ -71,7 +71,7 @@ void dosya_yap()
         return;
         }
 
-    printf("Dosya oluþturuldu: students.dat\n");
+    printf("Dosya oluÅŸturuldu: students.dat\n");
     fclose(file);
 }
 
@@ -85,13 +85,13 @@ void searchByName()
 
     if (file == NULL)
     {
-        printf("Dosya açýlamadý.\n");
+        printf("Dosya aÃ§Ä±lamadÄ±.\n");
         return;
     }
 
 
 
-    printf("Aramak istediginiz öðrencinin adini girin: ");
+    printf("Aramak istediginiz Ã¶ÄŸrencinin adini girin: ");
     fgets(searchName, sizeof(searchName), stdin);
     searchName[strcspn(searchName, "\n")] = '\0';
 
@@ -124,7 +124,7 @@ void ogrenci_ekle()
 
     if (file == NULL)
         {
-        printf("Dosya açýlamadý.\n");
+        printf("Dosya aÃ§Ä±lamadÄ±.\n");
         return;
         }
 
@@ -138,7 +138,7 @@ void ogrenci_ekle()
     fgets(ogrenci.name, sizeof(ogrenci.name), stdin);
 
     ogrenci.name[strcspn(ogrenci.name, "\n")] = '\0';
-    printf("Bölümü: ");
+    printf("BÃ¶lÃ¼mÃ¼: ");
     fgets(ogrenci.bolum, sizeof(ogrenci.bolum), stdin);
 
     ogrenci.bolum[strcspn(ogrenci.bolum, "\n")] = '\0';
@@ -162,7 +162,7 @@ void listStudents()
         return;
     }
 
-    printf("Öðrenciler:\n");
+    printf("Ã–ÄŸrenciler:\n");
 
 
     while (fread(&ogrenci, sizeof(struct Ogrenci), 1, file))
